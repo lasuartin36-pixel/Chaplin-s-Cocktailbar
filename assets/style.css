@@ -224,3 +224,16 @@ footer{background:var(--ink);padding:clamp(48px,6vw,90px) var(--pad) 32px;border
 .logo{display:flex;align-items:center;gap:12px}
 .logo img{width:46px;height:46px;flex:none}
 .foot .logo img{width:64px;height:64px}
+
+/* ---------- Speisekarte (Chaplin's Diner) ---------- */
+.chips{position:sticky;top:70px;z-index:50;display:flex;gap:10px;overflow-x:auto;padding:14px 0;margin:0 0 clamp(20px,3vw,40px);background:var(--ink);border-bottom:1px solid var(--line-d);scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;padding:9px 20px;border:1px solid var(--line-d);font-family:var(--type);font-size:13px;letter-spacing:.16em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s}
+.chips a:hover,.chips a.on{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.menu-cat{padding-top:clamp(36px,5vw,72px);scroll-margin-top:150px}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px 28px;flex-wrap:wrap;margin-bottom:10px;padding-bottom:16px;border-bottom:2px solid var(--paper)}
+.cat-head .h-lg{font-size:clamp(30px,4vw,60px)}
+.cat-note{font-family:var(--type);font-size:13px;letter-spacing:.08em;color:var(--brass)}
+.menu-cat .item .tag+.tag{margin-left:6px}
+.item h3{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.item .tag,.menu-cat .item .tag+.tag{margin-left:0}

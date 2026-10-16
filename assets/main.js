@@ -21,6 +21,23 @@
     });
   });
 
+  // Aktive Kategorie in der Speisekarten-Navigation hervorheben
+  var chips = document.querySelectorAll('.chips a');
+  if (chips.length && 'IntersectionObserver' in window) {
+    var map = {};
+    chips.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          chips.forEach(function (a) { a.classList.remove('on'); });
+          map[e.target.id].classList.add('on');
+          map[e.target.id].scrollIntoView({ inline: 'center', block: 'nearest' });
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    document.querySelectorAll('.menu-cat').forEach(function (s) { spy.observe(s); });
+  }
+
   var items = document.querySelectorAll('[data-reveal]');
   if (!('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('in'); });
