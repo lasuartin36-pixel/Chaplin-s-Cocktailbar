@@ -224,7 +224,3 @@ footer{background:var(--ink);padding:clamp(48px,6vw,90px) var(--pad) 32px;border
 .logo{display:flex;align-items:center;gap:12px}
 .logo img{width:46px;height:46px;flex:none}
 .foot .logo img{width:64px;height:64px}
-.hero figure img.seal{position:absolute;left:-62%;top:7%;width:40%;height:auto;object-fit:initial;filter:none;opacity:.95;animation:spin 60s linear infinite;z-index:2}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.hero figure img.seal{animation:none}}
-@media (max-width:860px){.hero figure img.seal{left:-12%;top:10%;width:38%}}
